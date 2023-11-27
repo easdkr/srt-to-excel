@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: virtual-colomn-test-mysql
+    environment:
+      MYSQL_DATABASE: "test"
+      MYSQL_ROOT_PASSWORD: "test"
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
